@@ -2,7 +2,6 @@ const timezones = require('./timezones')
 const tokenStrings = require('./tokens')
 
 module.exports = function initCountdown (countdown) {
-  console.log(countdown);
   if (!countdown) throw new Error('No countdown detected')
   createCountdownChildElements(countdown)
   let targetTime = parseTargetTime(countdown)
