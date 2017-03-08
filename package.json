@@ -1,6 +1,6 @@
 {
   "name": "count-to-date",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple countdown timer to a specific date (with timezone support)",
   "main": "dist/index.js",
   "author": "Zell Liew",
