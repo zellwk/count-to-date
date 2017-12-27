@@ -120,6 +120,14 @@ function populateCountdown (countdown, targetTime) {
         sibling.innerHTML = token
       }
     })
+
+    if (timeRemaining.total <= 0) {
+      clearInterval(updateCountdown)
+      tokens.forEach(el => {
+        el.innerHTML = 0
+      })
+      countdown.dataset.hasEnded = true
+    }
   }
 }
 
@@ -130,7 +138,7 @@ function getTimeRemaining (endtime) {
   var hours = Math.floor((t / (1000 * 60 * 60)) % 24)
   var days = Math.floor(t / (1000 * 60 * 60 * 24))
   return {
-    'total': t,
+    total: t,
     days,
     hours,
     minutes,
