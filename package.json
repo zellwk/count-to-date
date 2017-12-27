@@ -11,7 +11,8 @@
     "browserify": "browserify src/bundle.js --standalone countToDate | derequire > dist/index.js",
     "uglify": "uglifyjs -mc < dist/index.js > dist/index.min.js",
     "build": "npm run clean && npm run babelify && npm run browserify && npm run uglify",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "release": "np"
   },
   "devDependencies": {
     "babel-cli": "^6.23.0",
@@ -20,6 +21,8 @@
     "browserify": "^14.1.0",
     "derequire": "^2.0.6",
     "mkdirp": "^0.5.1",
+    "np": "^2.18.3",
+    "rimraf": "^2.6.2",
     "uglifyjs": "^2.4.10"
   }
 }
